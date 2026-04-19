@@ -1,0 +1,28 @@
+# Virtual environments
+.venv/
+venv/
+
+# VS Code settings
+.vscode/
+
+# Python cache and build
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Django
+*.sqlite3
+/staticfiles/
+/media/
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
