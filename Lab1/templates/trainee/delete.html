@@ -1,0 +1,23 @@
+{% extends 'parent.html' %}
+
+{% block title %}Delete Trainee{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-7 col-lg-5">
+        <div class="card border-danger shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title text-danger mb-3">Delete Trainee</h3>
+                <p>Are you sure you want to delete <strong>{{ trainee.name }}</strong>?</p>
+                <p class="text-muted mb-4">This action cannot be undone.</p>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                    <a href="{% url 'trainee_list' %}" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
